@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is CS open?</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <h1 id="index-h1">Is CS open?</h1>
+    <p id="question">I am a:</p>
+
+    <a id="index-button" onclick="checkStatus('taught')">Student</a>
+    <a id="index-button" onclick="checkStatus('non-taught')">Staff/PHD</a>
+
+    <script>
+        function checkStatus(studentType) {
+            var currentTime = new Date();
+            var currentHour = currentTime.getHours();
+            var currentDay = currentTime.getDay();
+
+            var isOpen = false;
+
+            if (studentType === 'non-taught' || (studentType === 'taught' && (currentHour >= 9 && currentHour < 23 && currentDay >= 1 && currentDay <= 5) || (currentHour >= 9 && currentHour < 17 && (currentDay === 0 || currentDay === 6)))) {
+                isOpen = true;
+            }
+
+            // Redirect to content.html with the status parameter
+            window.location.href = 'content.html?status=' + (isOpen ? 'open' : 'closed');
+        }
+    </script>
+
+</body>
+</html>

@@ -9,7 +9,9 @@ A fun little website that reports on the current status of the Computer Science 
 <br>
 
 ## Q. Why did you make this website?
-A lot of people keep asking if the buidling is open or not in the [CSS](https://cssbham.com/) Discord server so I thought I'd do them a favour by making this :) Also my flight was delayed and I had nothing better to do :p
+A lot of people keep asking if the buidling is open or not in the [CSS](https://cssbham.com/) Discord server so I thought I'd do them a favour by making this :) 
+
+Also my flight was delayed and I had nothing better to do :p
 
 ## Q. How does it work?
 iscsopen.com makes use of advanced deep learning capabilities to determine whether the CS building is open (i hardcoded the values)
